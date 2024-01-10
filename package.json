@@ -1,0 +1,37 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "description": "React Template",
+  "main": "index.js",
+  "scripts": {
+    "build:esbuild": "esbuild src/js/index.js --bundle --minify --loader:.js=jsx --format=esm --outfile=public/dist/bundle.js",
+    "watch:esbuild": "esbuild src/js/index.js --bundle --loader:.js=jsx --format=iife --outfile=public/dist/bundle.js --watch",
+    "build:css": "esbuild src/css/style.css --bundle --minify --outfile=public/dist/bundle.css",
+    "watch:css": "esbuild src/css/style.css --bundle --outfile=public/dist/bundle.css --watch",
+    "serve": "serve public/ -s",
+    "open": "opener http://localhost:3000",
+    "build": "concurrently --kill-others-on-fail npm:build:esbuild npm:build:css",
+    "watch": "concurrently --kill-others-on-fail npm:watch:esbuild npm:watch:css npm:serve npm:open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "esbuild": "0.19.11",
+    "opener": "^1.5.2",
+    "serve": "^14.2.1"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "axios": "^1.6.5",
+    "bootstrap": "^5.3.2",
+    "lucide-react": "^0.307.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.2",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4",
+    "react-router-dom": "^6.21.1",
+    "redux-remember": "^5.1.0"
+  }
+}
