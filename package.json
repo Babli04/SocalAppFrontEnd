@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "esbuild": "0.19.11",
+    "esbuild": "0.20.1",
     "opener": "^1.5.2",
     "serve": "^14.2.1"
   },
